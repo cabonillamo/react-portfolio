@@ -4,8 +4,8 @@ import profilePicture from "../img/profile-picture.jpeg";
 function Presentation() {
   return (
     <div className="presentacion" style={{ backgroundColor: "#1a202c" }}>
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-12">
-        <div className="md:w-3/5">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between py-12 sm:px-4">
+        <div className="md:w-3/5 sm:w-full mb-8 md:mb-0 md:pr-8">
           <p className="text-white text-sm uppercase tracking-widest font-semibold">
             Bienvenidos
           </p>
@@ -25,8 +25,8 @@ function Presentation() {
             Ir a Portafolio
           </a>
         </div>
-        <div className="md:w-2/5 mt-8 md:mt-0">
-          <div className="h-48 w-48 mx-auto">
+        <div className="md:w-2/5">
+          <div className="h-48 w-48 mx-auto mb-6 md:mb-0">
             <img
               src={profilePicture}
               alt="Profile Picture"

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useSpring, animated } from "react-spring";
 import "./Nav.css";
 
 function Nav() {
@@ -16,6 +17,10 @@ function Nav() {
     setShowCloseButton(false);
   };
 
+  const menuAnimation = useSpring({
+    transform: showMenu ? "scale(1)" : "scale(0)",
+  });
+
   return (
     <nav id="nav">
       <div className="menu-container">
@@ -29,7 +34,10 @@ function Nav() {
         >
           <FaBars />
         </button>
-        <ul className={`d-md-flex ${showMenu ? "show" : "hidden"}`}>
+        <animated.ul
+          style={menuAnimation}
+          className={`d-md-flex ${showMenu ? "show" : "hidden"}`}
+        >
           <li>
             <a href="#sobremi">SOBRE MI</a>
           </li>
@@ -46,7 +54,7 @@ function Nav() {
           >
             <FaTimes />
           </button>
-        </ul>
+        </animated.ul>
       </div>
     </nav>
   );

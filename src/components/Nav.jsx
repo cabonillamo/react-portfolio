@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useSpring, animated } from "react-spring";
+import { useTrail, animated } from "react-spring";
 import "./Nav.css";
 
 function Nav() {
@@ -17,8 +17,22 @@ function Nav() {
     setShowCloseButton(false);
   };
 
-  const menuAnimation = useSpring({
-    transform: showMenu ? "scale(1)" : "scale(0)",
+  const menuItems = [
+    { label: "INICIO", href: "#inicio" },
+    { label: "SOBRE MI", href: "#sobremi" },
+    { label: "PORTFOLIO", href: "#portfolio" },
+    { label: "LinkedIn", href: "#linkedin" },
+  ];
+
+  const menuTrail = useTrail(menuItems.length, {
+    from: {
+      opacity: 0,
+      transform: showMenu ? "translateX(-100%)" : "translateY(-100%)",
+    },
+    to: {
+      opacity: showMenu ? 1 : 0,
+      transform: showMenu ? "translateX(0%)" : "translateY(-100%)",
+    },
   });
 
   return (
@@ -34,19 +48,12 @@ function Nav() {
         >
           <FaBars />
         </button>
-        <animated.ul
-          style={menuAnimation}
-          className={`d-md-flex ${showMenu ? "show" : "hidden"}`}
-        >
-          <li>
-            <a href="#sobremi">SOBRE MI</a>
-          </li>
-          <li>
-            <a href="#portfolio">PORTFOLIO</a>
-          </li>
-          <li>
-            <a href="#linkedin">LinkedIn</a>
-          </li>
+        <ul className={`d-md-flex ${showMenu ? "show" : "hidden"}`}>
+          {menuTrail.map((props, index) => (
+            <animated.li key={index} style={props}>
+              <a href={menuItems[index].href}>{menuItems[index].label}</a>
+            </animated.li>
+          ))}
           <button
             className="close-button d-lg-none"
             onClick={handleCloseClick}
@@ -54,7 +61,7 @@ function Nav() {
           >
             <FaTimes />
           </button>
-        </animated.ul>
+        </ul>
       </div>
     </nav>
   );

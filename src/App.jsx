@@ -1,8 +1,14 @@
-import React from 'react';
-import Nav from './components/Nav';
+import React from "react";
+import Header from "./components/Header";
+import Presentation from "./components/Presentation";
 
 function App() {
-  return <Nav />;
+  return (
+    <>
+      <Header />
+      <Presentation />
+    </>
+  );
 }
 
 export default App;

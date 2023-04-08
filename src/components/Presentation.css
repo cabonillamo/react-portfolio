@@ -1,0 +1,6 @@
+.gradient-background {
+  background-image: linear-gradient(to bottom, #1a202c, #ffffff);
+  background-size: 100% 6%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}

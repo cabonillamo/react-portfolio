@@ -2,19 +2,19 @@ import React from "react";
 import profilePicture from "../img/profile-picture.jpeg";
 import "../components/Presentation.css";
 
-function Presentation() {
+const Presentation = () => {
   return (
     <div
       className="gradient-background presentacion"
       style={{ backgroundColor: "#1a202c" }}
     >
-      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between py-12 sm:px-4">
+      <div className="container flex flex-col mx-auto gradient-background border-none sm:flex-row items-center justify-between py-12 sm:px-4">
         <div className="md:w-3/5 sm:w-full mb-8 md:mb-0 md:pr-8">
           <p className="text-white text-sm uppercase tracking-widest font-semibold">
             Bienvenidos
           </p>
           <h2 className="text-4xl text-white font-bold mt-4">
-            Soy <span className="text-blue-500">Carlo Bonilla</span>, Ingeniero
+            Soy <span className="text-blue-500">Carlo Boilla</span>, Ingeniero
             de Software
           </h2>
           <p className="text-gray-300 text-lg mt-6 max-w-lg">
@@ -42,6 +42,6 @@ function Presentation() {
       </div>
     </div>
   );
-}
+};
 
 export default Presentation;

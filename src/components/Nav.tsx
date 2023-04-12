@@ -3,9 +3,14 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { useTrail, animated } from "react-spring";
 import "./Nav.css";
 
-function Nav() {
-  const [showMenu, setShowMenu] = useState(false);
-  const [showCloseButton, setShowCloseButton] = useState(false);
+interface MenuItem {
+  label: string;
+  href: string;
+}
+
+const Nav = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showCloseButton, setShowCloseButton] = useState<boolean>(false);
 
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
@@ -17,7 +22,7 @@ function Nav() {
     setShowCloseButton(false);
   };
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { label: "INICIO", href: "#inicio" },
     { label: "SOBRE MI", href: "#sobremi" },
     { label: "PORTFOLIO", href: "#portfolio" },
@@ -65,6 +70,6 @@ function Nav() {
       </div>
     </nav>
   );
-}
+};
 
 export default Nav;

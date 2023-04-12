@@ -14,7 +14,7 @@ const Presentation = () => {
             Bienvenidos
           </p>
           <h2 className="text-4xl text-white font-bold mt-4">
-            Soy <span className="text-blue-500">Carlo Boilla</span>, Ingeniero
+            Soy <span className="text-blue-500">Carlo Bonilla</span>, Ingeniero
             de Software
           </h2>
           <p className="text-gray-300 text-lg mt-6 max-w-lg">

@@ -4,9 +4,3 @@
   background-repeat: no-repeat;
   background-position: bottom;
 }
-
-.flex-col {
-  flex: 1;
-  height: 100%;
-  border: 1px solid #ffffff;
-}

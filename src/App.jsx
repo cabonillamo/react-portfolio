@@ -2,6 +2,7 @@ import { useSpring, animated } from "react-spring";
 import Header from "./components/Header/Header";
 import Presentation from "./components/Presentation/Presentation";
 import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   const fadeIn = useSpring({
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <Presentation />
       <About />
+      <Skills />
     </animated.div>
   );
 }

@@ -1,8 +1,7 @@
-import React from "react";
 import { useSpring, animated } from "react-spring";
-import Header from "./components/Header";
-import Presentation from "./components/Presentation";
-import About from "./components/About";
+import Header from "./components/Header/Header";
+import Presentation from "./components/Presentation/Presentation";
+import About from "./components/About/About";
 
 function App() {
   const fadeIn = useSpring({

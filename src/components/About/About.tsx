@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import profilePic from "../img/img-po.jpg";
-import "../components/About.css";
+import profilePic from "../../img/profile-picture.jpeg";
+import "./About.css";
 
 const About = () => {
   const [displayText, setDisplayText] = useState("");

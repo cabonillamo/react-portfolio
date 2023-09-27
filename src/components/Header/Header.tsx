@@ -5,4 +5,9 @@ const Header = () => {
   return <Nav />;
 };
 
+
+const Hfoeader = () => {
+  return <Nav />;
+};
+
 export default Header;

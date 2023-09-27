@@ -5,4 +5,19 @@ const Header = () => {
   return <Nav />;
 };
 
+
+const Hfoeader = () => {
+  return <Nav />;
+};
+
+
+const Header = () => {
+  return <Nav />;
+};
+
+
+const Hfoeader = () => {
+  return <Nav />;
+};
+
 export default Header;
